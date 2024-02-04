@@ -1,3 +1,7 @@
+:root {
+  --footer-text-color: #898989;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,19 +22,19 @@ h2 {
   font-weight: 500;
 }
 
-p, a {
-  font-size: 1.6rem;
+p {
+  font-size: 1.8rem;
 }
 
 /* HEADER */
 
 header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 10vh 2rem 0 2rem;
 }
 
 .profile_picture_container {
@@ -49,17 +53,15 @@ header {
 /* MAIN */
 
 main {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 2rem 2rem;
-  max-width: 720px;
-  margin: auto;
 }
 
 .description {
-  text-align: justify;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .links {
@@ -70,23 +72,44 @@ main {
 
 .button {
   width: 100%;
+  max-width: 620px;
   background-color: #132333;
-  color: white;
+  color: rgb(245, 245, 245);
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 8px;
   margin-bottom: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s; /* I dont know */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button__figure {
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.button__img {
+  height: 100%;
 }
 
 /* FOOTER */
 
 footer {
-  width: 100vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.footer_elements_container {
-  margin: auto;
+.footer__container {
   max-width: 720px;
-  padding: 2rem 2rem 3rem 2rem;
+  padding: 1rem 2rem 3rem 2rem;
+  text-align: right;
+  color: var(--footer-text-color);
+}
+
+.footer__paragraph {
+  font-size: 1.4rem;
 }
